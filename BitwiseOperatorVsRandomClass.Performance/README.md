@@ -14,5 +14,5 @@ Bitwise operators vs Random class to generate random a value which one is faster
 |        GenerateValue_RandomClass | 958.57 ns | 8.063 ns | 7.148 ns |     864 B |
 
 - Based on the above result, using Bitwise operators to generate some random value from the same array is 4 times faster than Random class
-- If you look carefully last 2 results. I used the same Random class with 2 different ways to check performance differences, as you can see the even same class may cause a huge performance penalty in your code if you don't use it properly.
-Of course, all of those implementations depends on your business case but still if it is good to know how the system is behaving.
+- If you look at the carefully last 2 results. I used the same Random class with 2 different ways to check performance differences, as you can see the even same class may cause a huge performance penalty in your code if you don't use it properly.
+Of course, all of those implementations depend on your business case but still if it is good to know how the system is behaving.
