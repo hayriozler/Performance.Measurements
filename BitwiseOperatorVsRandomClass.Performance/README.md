@@ -28,4 +28,4 @@ Of course, all of those implementations depend on your business case but still i
 
 
 
-### Question: Why when we output results to the console, why 3 methods executing at similar times.?
+# Question: Why when we output results to the console, why 3 methods executing at similar times.?
