@@ -13,7 +13,7 @@ public class IdGenerator
     {
         long _randomId = DateTime.Now.Ticks;
         var len = _chars.Length - 1;
-        var s = string.Create(10, _randomId, (buffer, value) =>
+        string.Create(10, _randomId, (buffer, value) =>
            {
                for (int i = 0; i < buffer.Length; i++)
                {
@@ -26,7 +26,7 @@ public class IdGenerator
     {
         long _randomId = DateTime.Now.Ticks;
         var len = _chars.Length;
-        var s = string.Create(10, _randomId, (buffer, value) =>
+        string.Create(10, _randomId, (buffer, value) =>
          {
              for (int i = 0; i < buffer.Length; i++)
              {
@@ -34,13 +34,15 @@ public class IdGenerator
                  buffer[i] = _chars[randomId];
              }
          });
+
     }
+
     [Benchmark]
     public void GenerateValue_RandomClass()
     {
         long _randomId = DateTime.Now.Ticks;
         var len = _chars.Length;
-        var s = string.Create(10, _randomId, (buffer, value) =>
+        string.Create(10, _randomId, (buffer, value) =>
          {
              for (int i = 0; i < buffer.Length; i++)
              {
@@ -48,5 +50,53 @@ public class IdGenerator
                  buffer[i] = _chars[randomId];
              }
          });
+    }
+
+
+
+    [Benchmark]
+    public void GenerateValue_BitwiseOperator_OutputToConsole()
+    {
+        long _randomId = DateTime.Now.Ticks;
+        var len = _chars.Length - 1;
+        var s = string.Create(10, _randomId, (buffer, value) =>
+        {
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                buffer[i] = _chars[(value >> (i * 2)) & len];
+            }
+        });
+        Console.WriteLine(s);
+    }
+    [Benchmark]
+    public void GenerateValue_RandomClass_Shared_OutputToConsole()
+    {
+        long _randomId = DateTime.Now.Ticks;
+        var len = _chars.Length;
+        var s = string.Create(10, _randomId, (buffer, value) =>
+        {
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                var randomId = Random.Shared.Next(len);
+                buffer[i] = _chars[randomId];
+            }
+        });
+        Console.WriteLine(s);
+    }
+
+    [Benchmark]
+    public void GenerateValue_RandomClass_OutputToConsole()
+    {
+        long _randomId = DateTime.Now.Ticks;
+        var len = _chars.Length;
+        var s = string.Create(10, _randomId, (buffer, value) =>
+        {
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                var randomId = new Random().Next(len);
+                buffer[i] = _chars[randomId];
+            }
+        });
+        Console.WriteLine(s);
     }
 }
