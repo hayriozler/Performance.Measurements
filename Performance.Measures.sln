@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperatorVsRandomClass.Performance", "BitwiseOperatorVsRandomClass.Performance\BitwiseOperatorVsRandomClass.Performance.csproj", "{186FDC2F-0452-4C4C-86B1-8130BF1FDDC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitwiseOperatorVsRandomClass.Performance", "BitwiseOperatorVsRandomClass.Performance\BitwiseOperatorVsRandomClass.Performance.csproj", "{186FDC2F-0452-4C4C-86B1-8130BF1FDDC5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B1864AC4-0505-4797-831A-57391D802E0E}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumParse.Performance", "EnumParse.Performance\EnumParse.Performance.csproj", "{BA88B4B0-B8F3-4271-AFD0-0B6814678D21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{186FDC2F-0452-4C4C-86B1-8130BF1FDDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186FDC2F-0452-4C4C-86B1-8130BF1FDDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186FDC2F-0452-4C4C-86B1-8130BF1FDDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA88B4B0-B8F3-4271-AFD0-0B6814678D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA88B4B0-B8F3-4271-AFD0-0B6814678D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA88B4B0-B8F3-4271-AFD0-0B6814678D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA88B4B0-B8F3-4271-AFD0-0B6814678D21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
