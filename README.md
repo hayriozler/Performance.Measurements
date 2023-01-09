@@ -12,3 +12,5 @@
 
 # 1 ns : Nano Seconds 0.000_000_001 sec
 # 1 us : Micro Seconds 0.000_001 sec
+
+- [Reference](https://aakinshin.net/posts/stephen-toub-benchmarks-part1/)
